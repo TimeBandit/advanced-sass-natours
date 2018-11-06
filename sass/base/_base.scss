@@ -1,0 +1,26 @@
+// resets
+// this architecture is ideal for large projects
+
+/* basic reset */
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  /* 👇 by default it's not inherited so this forces it */
+  box-sizing: inherit;
+}
+
+/* convert all measurements to rem */
+html {
+  /* 👇 use cannot change the font size via zoom in the browser */
+  /* font-size: 10px; */
+  /* a percentage of the root font-size */
+  // defines what 1rem is
+  font-size: 62.5%;
+}
+
+/* project wide font settings */
+body {
+  box-sizing: border-box;
+}
