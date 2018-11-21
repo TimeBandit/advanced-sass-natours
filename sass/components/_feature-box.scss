@@ -3,10 +3,13 @@
 	font-size: 1.5rem;
 	padding: 2.5rem;
 	text-align: center;
-	border-radius: 3px;
+	border-radius: 30px;
 	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 	&__icon {
+		font-size: 6rem;
+		margin-bottom: 0.5rem;
 	}
 	&__text {
+		font-size: 1rem;
 	}
 }
