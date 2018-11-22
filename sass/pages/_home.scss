@@ -14,4 +14,12 @@
 		),
 		url(../img/nat-4.jpg);
 	background-size: cover;
+	// move the section up
+	margin-top: -10rem;
+	// an alternative to clip path in crating
+	transform: skewY(-7deg);
+	// the direct child selector
+	& > * {
+		transform: skewY(7deg);
+	}
 }

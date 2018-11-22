@@ -1,18 +1,19 @@
 {
-  "name": "starter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "node-sass ./sass/main.scss ./css/style.css -w",
-    "start": "live-server"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "live-server": "^1.2.0",
-    "node-sass": "^4.9.4"
-  }
+	"name": "starter",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"compile:sass": "node-sass ./sass/main.scss ./css/style.css -w",
+		"start": "concurrently \"live-server\" \"npm run-script compile:sass\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^4.1.0",
+		"live-server": "^1.2.0",
+		"node-sass": "^4.9.4"
+	}
 }
