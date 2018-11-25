@@ -1,0 +1,38 @@
+.card {
+	// to make the rotation look like it moves towards you
+	// you need to add 'perspective' to the parent element
+	// of the element you want to rotate
+	perspective: 150rem;
+	-moz-perspective: 150rem;
+	position: relative;
+	// card collapses when child set to absolute
+	height: 50rem;
+
+	&__side {
+		height: 50rem;
+		transition: all 0.8s ease;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// width collapses when set to absolute
+		width: 100%;
+		// dont want to see the reverse of the face
+		backface-visibility: hidden;
+		&--front {
+			background-color: orangered;
+		}
+
+		&--back {
+			background-color: $color-white;
+			transform: rotateY(180deg);
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(180deg);
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(0deg);
+	}
+}
