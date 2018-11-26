@@ -1,7 +1,8 @@
 .card {
 	// to make the rotation look like it moves towards you
 	// you need to add 'perspective' to the parent element
-	// of the element you want to rotate
+	// of the element you want to rotate. so card is the parent
+	// and -front and -back are the element that turn
 	perspective: 150rem;
 	-moz-perspective: 150rem;
 	position: relative;
@@ -18,13 +19,28 @@
 		width: 100%;
 		// dont want to see the reverse of the face
 		backface-visibility: hidden;
+		border-radius: 3px;
+		// nice shadow for cards
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 		&--front {
-			background-color: orangered;
+			background-color: $color-white;
 		}
 
 		&--back {
-			background-color: $color-white;
 			transform: rotateY(180deg);
+			&-1 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-secondary-light,
+					$color-secondary-dark
+				);
+			}
+			&-2 {
+				background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+			}
+			&-3 {
+				background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+			}
 		}
 	}
 
