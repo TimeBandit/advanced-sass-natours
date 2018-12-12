@@ -1,0 +1,39 @@
+.form {
+	&__group:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	&__input {
+		font-size: 1.5rem;
+		// 👇 otherwise it's get the browser default and not whats in copy
+		// everyting else inherits
+		font-family: inherit;
+		color: inherit;
+		padding: 1.5rem 2rem; // allways put a bit more on the sides for inputs
+		border-radius: 2px;
+		background-color: rgba($color-white, 0.5);
+		border: none;
+		border-bottom: 3px solid transparent; // offset the 3px shift that happens below
+		width: 90%;
+		display: block;
+
+		&:focus {
+			outline: none; // to take away the default blue line
+			// 👇 add next two for screen readers as outline is none
+			box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+			border-bottom: 3px solid $color-primary;
+		}
+
+		// chrome form valid gives us psudo classes to work with
+		&:focus:invalid {
+			border-bottom: 3px solid $color-secondary-dark;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-grey-dark-2;
+		}
+	}
+
+	&__label {
+	}
+}
