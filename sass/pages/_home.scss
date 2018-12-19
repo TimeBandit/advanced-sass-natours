@@ -41,7 +41,7 @@
 }
 
 .book {
-	// a different way of achieving a clipped section useing grandient rather that
+	// a different way of achieving a clipped section using gradient rather that
 	// skew or with clip-path
 	// 'transparent' is also a valid css color
 	background-image: linear-gradient(
@@ -52,6 +52,7 @@
 		),
 		url(../img/nat-10.jpg);
 	background-size: 100%;
+	background-repeat: no-repeat;
 	border-radius: 3px;
 	overflow: hidden;
 	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
