@@ -1,5 +1,6 @@
 .btn {
 	/* link selected any element whose target has not been visited */
+	&, // applied to all the button element as well
 	&:link,
 	&:visited {
 		/* for setting position absolute on the pseudo element */
@@ -13,12 +14,15 @@
 		position: relative;
 		text-decoration: none;
 		text-transform: uppercase;
+		// changes for the <button> element
+		border: none;
+		cursor: pointer;
 	}
 
 	&--animated {
 		animation: moveInBottom 0.5s ease-out 0.75s backwards;
 	}
-
+	// the focus style changes the default blue box when selecred
 	&:hover {
 		transform: translateY(-3px);
 		box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -29,7 +33,9 @@
 	}
 
 	/* active state - when you click on it */
-	&:active {
+	&:active,
+	&:focus {
+		outline: none;
 		transform: translateY(-1px);
 		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
 	}

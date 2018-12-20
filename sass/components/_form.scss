@@ -56,6 +56,10 @@
 		display: inline-block;
 	}
 
+	&__radio-input {
+		display: none;
+	}
+
 	&__radio-label {
 		font-size: $default-font-size;
 		cursor: pointer;
@@ -85,6 +89,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			background-color: $color-primary;
+			transition: opacity 0.2s;
 			opacity: 0;
 		}
 	}
