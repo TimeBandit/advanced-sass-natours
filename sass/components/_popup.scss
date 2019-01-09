@@ -10,11 +10,18 @@
 	// cant be animated
 	visibility: hidden;
 	transition: all 0.3s;
+
+	// OPEN STATES
 	// really clever use of target to open the popup
 	// :taget checks the url fragment
 	&:target {
 		opacity: 1;
 		visibility: visible;
+	}
+
+	&:target &__content {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
 	}
 
 	&__content {
@@ -25,7 +32,10 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		opacity: 0;
+		// can only have one transform in a block so combine
+		transform: translate(-50%, -50%) scale(0.25);
+		transition: all 0.5s 0.2s;
 		border-radius: 3px;
 		overflow: hidden; // to stop images overlapping the
 		// table is a technique used to give two
@@ -66,5 +76,23 @@
 		-ms-hyphens: auto;
 		-webkit-hyphens: auto; // hyphens for word breaks, doc land atrribue must be present
 		hyphens: auto; // hyphens for word breaks, doc land atrribue must be present
+	}
+
+	&__close {
+		&:link,
+		&:visited {
+			color: $color-grey-dark;
+			position: absolute;
+			top: 2.5rem;
+			right: 2.5rem;
+			font-size: 3rem;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.2s;
+			line-height: 1; // cos the line boxes is higher than the 'x'
+		}
+		&:hover {
+			color: $color-primary;
+		}
 	}
 }
