@@ -1,4 +1,18 @@
 @charset "UTF-8";
+/* 
+0-600px:        phone
+600 - 900px:    ablet portrait
+900 - 1200px:   tablet landscape
+1200 - 1800px:  normal styles
+1800px+:        big desktop       
+*/
+/* 
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -42,6 +56,12 @@ html {
   /* font-size: 10px; */
   /* a percentage of the root font-size */
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 /* project wide font settings */
 body {
@@ -572,7 +592,7 @@ body {
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row::after {
-    content: '';
+    content: "";
     display: table;
     clear: both; }
   .row [class^='col-'] {

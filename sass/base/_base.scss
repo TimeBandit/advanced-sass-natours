@@ -5,22 +5,30 @@
 *,
 *::before,
 *::after {
-  margin: 0px;
-  padding: 0px;
-  /* 👇 by default it's not inherited so this forces it */
-  box-sizing: inherit;
+	margin: 0px;
+	padding: 0px;
+	/* 👇 by default it's not inherited so this forces it */
+	box-sizing: inherit;
 }
 
 /* convert all measurements to rem */
 html {
-  /* 👇 use cannot change the font size via zoom in the browser */
-  /* font-size: 10px; */
-  /* a percentage of the root font-size */
-  // defines what 1rem is
-  font-size: 62.5%;
+	/* 👇 use cannot change the font size via zoom in the browser */
+	/* font-size: 10px; */
+	/* a percentage of the root font-size */
+	// defines what 1rem is
+	font-size: 62.5%;
+
+	@include respond-phone {
+		font-size: 50%;
+	}
+
+	@include respond(phone) {
+		font-size: 50%;
+	}
 }
 
 /* project wide font settings */
 body {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
