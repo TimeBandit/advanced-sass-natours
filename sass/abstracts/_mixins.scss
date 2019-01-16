@@ -37,25 +37,33 @@ $breakpoint argument choices:
 - tab-land
 - big-desktop
 */
+
+// 1rem=16px
+// ems used because of browsr support problems of rems in media queries
+// 1em or rem in a media query is = to the default font size of the browser
 @mixin respond($breakpoint) {
 	@if $breakpoint == phone {
-		@media (max-width: 600px) {
+		// 600px/16
+		@media (max-width: 37.5em) {
 			@content;
 		}
 	}
+	// 900px/16
 	@if $breakpoint == tab-port {
-		@media (max-width: 900px) {
+		@media (max-width: 56.25em) {
 			@content;
 		}
 	}
+	// 1200px/16
 	@if $breakpoint == tab-land {
-		@media (max-width: 1200px) {
+		@media (max-width: 75em) {
 			@content;
 		}
 	}
 	// 1200 - 1800 are the normal styles
+	// 1800px/16
 	@if $breakpoint == big-desktop {
-		@media (min-width: 1800px) {
+		@media (min-width: 112.5em) {
 			@content;
 		}
 	}
