@@ -19,7 +19,8 @@ html {
 	// defines what 1rem is
 	font-size: 62.5%; // root font size 1rem=10px 10px/16px = 62.5%
 
-	// place the larger ones before larger ones
+	// place the larger ones before larger ones when using max-width in your breakpoints
+	// with mobile first start with the smalles ones
 	@include respond(tab-land) {
 		// width < 1200?
 		font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
@@ -42,4 +43,8 @@ html {
 /* project wide font settings */
 body {
 	box-sizing: border-box;
+	padding: 3rem;
+	@include respond(tab-port) {
+		padding: 0; // 1rem = 8px, 8/16 = 50%
+	}
 }

@@ -38,6 +38,9 @@ $breakpoint argument choices:
 - big-desktop
 */
 
+// ORDER in which to ass all the media queries
+// base + typygraphy > general layout + grid > page layout > components
+
 // 1rem=16px
 // ems used because of browsr support problems of rems in media queries
 // 1em or rem in a media query is = to the default font size of the browser
