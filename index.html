@@ -78,6 +78,13 @@
 					</div>
 					<div class="col-1-of-2">
 						<div class="composition">
+							<!-- browser selects image for vw width & resolution -->
+							<img
+								srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 100w"
+								sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+								alt="photo 1"
+								class="composition__photo composition__photo--p1"
+							/>
 							<img
 								src="img/nat-1-large.jpg"
 								alt="photo1"
@@ -315,7 +322,17 @@
 		<!-- the footer comes after the main content of the site -->
 		<footer class="footer">
 			<div class="footer__logo-box">
-				<img src="/img/logo-green-2x.png" alt="full logo" class="footer__logo" />
+				<!-- an example of DENSITY SWITCHING where the image displaid depends on -->
+				<!-- the pixel density of the screen you are viewing the site on -->
+				<picture class="footer__logo">
+					<!-- ART DIRECTION happens at the breakpoint of the phone-->
+					<source
+						srcset="/img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+						media="(max-width:37.5em)"
+					/>
+					<!-- 👇 fallback image -->
+					<img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="full logo" />
+				</picture>
 			</div>
 			<div class="row">
 				<div class="col-1-of-2">
