@@ -11,10 +11,13 @@
 	visibility: hidden;
 	transition: all 0.3s;
 
-	// backdrop filter applies to what's behind the current element
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	background-color: rgba($color-black, 0.3);
+	// graceful degredation
+	@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+		// backdrop filter applies to what's behind the current element
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba($color-black, 0.3);
+	}
 
 	// OPEN STATES
 	// really clever use of target to open the popup

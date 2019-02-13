@@ -26,17 +26,22 @@
 	&__shape {
 		width: 15rem;
 		height: 15rem;
-		// border-radius: 50%;
-		-webkit-clip-path: ellipse(50% at 50% 50%);
-		clip-path: ellipse(50% at 50% 50%);
 		float: left; // element must be floated for shapeoutside to work
-		// controls how content will wrap around a floated element’s bounding-box
-		// element must have fixed width and height
-		-webkit-shape-outside: circle(50% at 50% 50%);
-		shape-outside: circle(50% at 50% 50%);
 		// best way to add space with a floated element is with a transform
 		transform: translateX(-3rem) skewX(12deg);
 		position: relative;
+		overflow: hidden;
+		border-radius: 50%;
+
+		@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+			// controls how content will wrap around a floated element’s bounding-box
+			// element must have fixed width and height
+			-webkit-shape-outside: circle(50% at 50% 50%);
+			shape-outside: circle(50% at 50% 50%);
+			-webkit-clip-path: ellipse(50% at 50% 50%);
+			clip-path: ellipse(50% at 50% 50%);
+			border-radius: none;
+		}
 
 		@include respond(phone) {
 			transform: translateX(-3rem) skewX(0);

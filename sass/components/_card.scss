@@ -18,6 +18,7 @@
 		// width collapses when set to absolute
 		width: 100%;
 		// dont want to see the reverse of the face
+		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		border-radius: 3px;
 		overflow: hidden; // to stop the image higing the rounded corners
