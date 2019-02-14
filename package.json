@@ -5,15 +5,21 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"compile:sass": "node-sass ./sass/main.scss ./css/style.css -w",
+		"watch:sass": "node-sass ./sass/main.scss ./css/style.css -w",
+		"compile:sass": "node-sass ./sass/main.scss ./css/style.comp.css",
+		"concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b 'last 10 version' css/style.concat.css -o css/style.prefix.css",
 		"start": "concurrently \"live-server\" \"npm run-script compile:sass\""
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"autoprefixer": "^9.4.7",
+		"concat": "^1.0.3",
 		"concurrently": "^4.1.0",
 		"live-server": "^1.2.0",
-		"node-sass": "^4.9.4"
+		"node-sass": "^4.9.4",
+		"postcss-cli": "^6.1.1"
 	}
 }
