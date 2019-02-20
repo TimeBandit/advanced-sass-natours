@@ -146,7 +146,8 @@
 		font-weight: 100; // huge text look better when it's thin
 	}
 	// TAB PORT
-	@include respond(tab-port) {
+	// @include respond(tab-port) {
+	@media only screen and (max-width: 56.25rem), only screen and (hove: none) {
 		// card collapses when child set to absolute
 		height: auto;
 		border-radius: 3px;
