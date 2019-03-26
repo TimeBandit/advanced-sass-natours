@@ -182,3 +182,14 @@
 	padding: 2.5rem;
 	color: var(--color-grey-light-4);
 }
+
+///////////////////////////////
+// GALLERY
+
+.gallery {
+	display: flex;
+	&__photo {
+		width: 100%; // for flexibble images so the image stays fluid
+		display: block; // an image should always be a block or inline block
+	}
+}
