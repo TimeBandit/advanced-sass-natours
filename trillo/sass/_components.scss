@@ -193,3 +193,87 @@
 		display: block; // an image should always be a block or inline block
 	}
 }
+
+///////////////////////////////
+// HOTEL OVERVIEW
+
+.overview {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--color-grey-light-2);
+	&__heading {
+		font-size: 2.25rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 1.5rem 3rem;
+	}
+
+	&__stars {
+		// flex:1 // not good, it will take as much space as possible
+		margin-right: auto; // the trick to get it to only take the space it needs
+		display: flex; // to get rid of the line-height space underneath the starts
+	}
+
+	&__icon {
+	}
+
+	&__icon-star,
+	&__icon-location {
+		width: 1.75rem;
+		height: 1.75rem;
+		fill: var(--color-primary);
+	}
+
+	&__location {
+	}
+
+	&__rating {
+	}
+
+	&__rating-average {
+	}
+
+	&__rating-count {
+	}
+}
+
+///////////////////////////////
+// BUTTON
+
+.btn-inline {
+	border: none;
+	color: var(--color-primary);
+	font-size: inherit;
+	border-bottom: 1px solid currentColor;
+	padding-bottom: 2px;
+	display: inline;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.2s;
+
+	// change the colour in the hover state and the border will automatically update
+	&:hover {
+		color: var(--color-grey-dark-1);
+	}
+
+	&:focus {
+		animation: pulsate 1s ease-in-out infinite forwards;
+		outline: none;
+	}
+}
+
+@keyframes pulsate {
+	0% {
+		transform: scale(1);
+		box-shadow: none;
+	}
+	50% {
+		transform: scale(1.04);
+		box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+	}
+	100% {
+		transform: scale(1);
+		box-shadow: none;
+	}
+}
