@@ -92,6 +92,7 @@ body {
 
 .description {
   background-color: #fff;
+  font-size: 1.4rem;
   box-shadow: var(--shadow-light);
   padding: 3rem;
   flex: 0 0 60%;
