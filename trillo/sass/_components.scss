@@ -274,9 +274,18 @@
 	cursor: pointer;
 	transition: all 0.2s;
 
+	& span {
+		margin-left: 3px;
+		transition: margin-left 0.2s;
+	}
+
 	// change the colour in the hover state and the border will automatically update
 	&:hover {
 		color: var(--color-grey-dark-1);
+
+		span {
+			margin-left: 8px;
+		}
 	}
 
 	&:focus {
