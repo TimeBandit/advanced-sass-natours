@@ -35,6 +35,10 @@ Grey dark 3: #999
 	--line: 1px solid var(--color-grey-light-2);
 }
 
+// sass var have to be used for media queries as css vars won't work
+// additionaly it has to be em's not rem's
+$bp-largest: 75em; // 1200px
+
 * {
 	margin: 0;
 	padding: 0;
