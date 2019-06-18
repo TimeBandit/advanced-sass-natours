@@ -17,6 +17,8 @@
 
 	@media only screen and (max-width: $bp-smallest) {
 		order: 1;
+		flex: 0 0 100%;
+		background-color: var(--color-grey-light-2);
 	}
 
 	&__input {
@@ -392,17 +394,21 @@
 		margin-right: 0.7rem;
 
 		// older browsers
-		// background-image: url(../img/chevron-thin-right.svg);
-		// background-size: cover;
+		background-image: url(../img/chevron-thin-right.svg);
+		background-size: cover;
 
 		// newer browsers - mask - allows the icon colour to be set
 		// mask is an area that you can look though to see what is behing it
 		// the icon will be used as the mask
-		background-color: var(--color-primary);
-		-webkit-mask-image: url(../img/chevron-thin-right.svg);
-		mask-image: url(../img/chevron-thin-right.svg);
-		-webkit-mask-size: cover;
-		mask-size: cover;
+		@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+			background-color: var(--color-primary);
+			-webkit-mask-image: url(../img/chevron-thin-right.svg);
+			mask-image: url(../img/chevron-thin-right.svg);
+			-webkit-mask-size: cover;
+			mask-size: cover;
+			// turn off the background image
+			background-image: none;
+		}
 	}
 }
 
