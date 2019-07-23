@@ -38,4 +38,6 @@ body {
 .container {
 	display: grid;
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+	// 8 grid columns in the center and 1 column on either side for full bleed content
+	grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr; // 1140/8 =>14rem
 }
