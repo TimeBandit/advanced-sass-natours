@@ -38,6 +38,16 @@ body {
 .container {
 	display: grid;
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-	// 8 grid columns in the center and 1 column on either side for full bleed content
-	grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr; // 1140/8 =>14rem
+	// 8 grid columns in the center and 1 column on either side for
+	// full bleed content, assume the content width is between 1100 and 1200
+	// lets take 1140/8 => 14rem. minmax make them adaptable, the 1fr on
+	// either side make it centered, without the sidebar we could use
+	// margin-auto or justify-content property, the columns are named
+
+	grid-template-columns:
+		[sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(
+			8,
+			[col-start] minmax(min-content, 14rem) [col-end]
+		)
+		[center-end] 1fr [full-end]; // 1140/8 =>14rem.
 }
