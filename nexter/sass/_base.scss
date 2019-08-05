@@ -59,4 +59,10 @@ body {
 			[col-start] minmax(min-content, 14rem) [col-end]
 		)
 		[center-end] minmax(6rem, 1fr) [full-end]; // 1140/8 =>14rem.
+
+	// only for debugging
+	& > * {
+		padding: 40px;
+		font-size: 3rem;
+	}
 }
