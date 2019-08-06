@@ -52,7 +52,7 @@ body {
 	// lets take 1140/8 => 14rem. minmax make them adaptable, the 1fr on
 	// either side make it centered, without the sidebar we could use
 	// margin-auto or justify-content property, the columns are named
-
+	// minmax(6rem, 1fr) means that this column never gets smaller than 6 rem;
 	grid-template-columns:
 		[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(
 			8,
