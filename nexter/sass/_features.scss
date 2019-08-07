@@ -1,10 +1,13 @@
 .features {
-	background-color: $color-grey-light-2;
+	// background-color: $color-grey-light-2;
 	grid-column: center-start / center-end;
+
+	margin: 15rem 0;
 	// make this grid item into a grid container
 	// sub-grids are not available yet
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	// by not defining the rows we create an implicit grid
 	// which is ok, the dotted lines in ff-dev tools show it's implicit
+	grid-gap: 6rem;
 }
