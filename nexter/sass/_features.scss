@@ -11,3 +11,21 @@
 	// which is ok, the dotted lines in ff-dev tools show it's implicit
 	grid-gap: 6rem;
 }
+
+.feature {
+	// turning this into a grid (nested grid)
+	display: grid;
+	// first column fits the icon and then the rest
+	// in real world we only define the columns and let the content
+	// define the rows
+	grid-template-columns: min-content 1fr;
+
+	&__icon {
+		fill: $color-primary;
+		width: 4.5rem;
+		height: 4.5rem;
+	}
+	&__text {
+		font-size: 1.7rem;
+	}
+}
