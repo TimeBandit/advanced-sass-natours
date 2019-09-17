@@ -6,24 +6,36 @@
 	// make this grid item into a grid container
 	// sub-grids are not available yet
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	// grid-template-columns: repeat(3, 1fr);
+
+	// create as many tracks of the width defines, you see less columns at
+	// smaller widths
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 	// by not defining the rows we create an implicit grid
 	// which is ok, the dotted lines in ff-dev tools show it's implicit
 	grid-gap: 6rem;
+	align-items: start;
 }
 
 .feature {
 	// turning this into a grid (nested grid)
+	// nested grids are only a good idea as long as the features are two dimensional
 	display: grid;
 	// first column fits the icon and then the rest
 	// in real world we only define the columns and let the content
 	// define the rows
 	grid-template-columns: min-content 1fr;
+	grid-row-gap: 1.5rem;
+	grid-column-gap: 2.5rem;
 
 	&__icon {
-		fill: $color-primary;
+		fill: $color-primary; // how you do it with svg icons
 		width: 4.5rem;
 		height: 4.5rem;
+		// -1 the last explicit grid line, if you didnt make
+		// it explicit it won't work
+		grid-row: 1 / span 2;
+		transform: translateY(-1rem);
 	}
 	&__text {
 		font-size: 1.7rem;
