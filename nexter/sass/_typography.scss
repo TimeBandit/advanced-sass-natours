@@ -60,3 +60,21 @@
 		background-color: $color-primary-dark;
 	}
 }
+
+// create margin bottom helper classes so we have dont
+// hardcode them against any component --  'atomic css'
+.mb-sm {
+	margin-bottom: 2rem;
+}
+
+.mb-md {
+	margin-bottom: 3rem;
+}
+
+.mb-lg {
+	margin-bottom: 4rem;
+}
+
+.mb-hg {
+	margin-bottom: 8rem;
+}
