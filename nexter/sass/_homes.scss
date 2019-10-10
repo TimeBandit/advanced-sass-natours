@@ -50,40 +50,27 @@
 		z-index: 1;
 	}
 
-	&__location {
-		svg {
-			fill: $color-primary;
-			height: 2rem;
-			width: 2rem;
-		}
-	}
-
+	&__location,
 	&__rooms {
-		svg {
-			fill: $color-primary;
-			height: 2rem;
-			width: 2rem;
-		}
+		margin-top: 2.5rem;
 	}
 
-	&__area {
-		svg {
-			fill: $color-primary;
-			height: 2rem;
-			width: 2rem;
-		}
-	}
-
+	&__location,
+	&__rooms,
+	&__area,
 	&__price {
+		font-size: 1.5rem;
+		margin-left: 2rem;
+		display: flex; // to bring them side-by-side
+		align-items: center;
 		svg {
 			fill: $color-primary;
 			height: 2rem;
 			width: 2rem;
-		}
-
-		p {
+			margin-right: 1rem;
 		}
 	}
+
 	&__btn {
 		grid-column: 1 / -1;
 	}

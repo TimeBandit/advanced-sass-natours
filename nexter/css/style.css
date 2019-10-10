@@ -189,28 +189,30 @@ body {
     align-self: end;
     transform: translateY(50%);
     z-index: 1; }
-  .home__location svg {
-    fill: #c69963;
-    height: 2rem;
-    width: 2rem; }
-  .home__rooms svg {
-    fill: #c69963;
-    height: 2rem;
-    width: 2rem; }
-  .home__area svg {
-    fill: #c69963;
-    height: 2rem;
-    width: 2rem; }
-  .home__price svg {
-    fill: #c69963;
-    height: 2rem;
-    width: 2rem; }
+  .home__location, .home__rooms {
+    margin-top: 2.5rem; }
+  .home__location, .home__rooms, .home__area, .home__price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center; }
+    .home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
+      fill: #c69963;
+      height: 2rem;
+      width: 2rem;
+      margin-right: 1rem; }
   .home__btn {
     grid-column: 1 / -1; }
 
 .gallery {
-  background-color: #54483a;
-  grid-column: full-start / full-end; }
+  background-color: #f9f7f6;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 5vw); }
+  .gallery__img {
+    object-fit: cover;
+    width: 100%; }
 
 .footer {
   background-color: #101d2c;
