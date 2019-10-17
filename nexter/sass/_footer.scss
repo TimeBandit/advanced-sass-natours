@@ -1,4 +1,34 @@
 .footer {
 	background-color: $color-secondary;
 	grid-column: full-start / full-end;
+	padding: 8rem;
+}
+
+.nav {
+	list-style: none;
+	display: grid;
+	// auto-fit - place as many columns as will fit in one row
+	// could use flexbox here but gid gives you spacing between the
+	// columns, with flex box you would margin-right all except the last
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	grid-gap: 2rem;
+	align-items: center;
+
+	&__link:link,
+	&__link:visited {
+		font-size: 1.4rem;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: $font-display;
+		text-align: center;
+		padding: 1.5rem;
+		display: block;
+		transition: all 0.2s;
+	}
+
+	&__link:hover,
+	&__link:active {
+		background-color: rgba(#fff, 0.05);
+	}
 }
