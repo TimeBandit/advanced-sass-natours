@@ -79,6 +79,13 @@ body {
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; }
 
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem; }
+
 .header {
   background-color: #54483a;
   grid-column: full-start / col-end 6; }
@@ -283,3 +290,10 @@ body {
     transition: all 0.2s; }
   .nav__link:hover, .nav__link:active {
     background-color: rgba(255, 255, 255, 0.05); }
+
+.copyright {
+  font-size: 1.4rem;
+  color: #aaa;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto; }
