@@ -2,6 +2,8 @@
 	background-color: $color-secondary;
 	grid-column: sidebar-start / sidebar-end;
 	grid-row: 1 / -1;
+	display: flex;
+	justify-content: center;
 }
 
 .nav-btn {
@@ -11,6 +13,7 @@
 	background-color: #fff;
 	height: 2px;
 	width: 4.5rem;
+	margin-top: 4rem;
 
 	&::before,
 	&::after {
@@ -20,14 +23,14 @@
 		content: ""; // this makes is visible
 		display: block;
 	}
-}
 
-// move up
-&::before {
-	transform: translateY(-1.5rem);
-}
+	// move up
+	&::before {
+		transform: translateY(-1.5rem);
+	}
 
-// move down
-&::after {
-	transform: translateY(1.5rem);
+	// move down
+	&::after {
+		transform: translateY(1.3rem);
+	}
 }
