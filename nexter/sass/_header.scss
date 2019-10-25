@@ -6,6 +6,8 @@
 	background-image: linear-gradient(rgba($color-secondary, 0.93), rgba($color-secondary, 0.93)),
 		url("../img/hero.jpeg");
 	background-position: center;
+	padding: 8rem;
+	padding-top: 4rem;
 
 	// When you only set up your grid to have just one row at 1fr,
 	// that will be the only explicit row you'll have, css grid
@@ -16,10 +18,21 @@
 	// space as they need for their individual contents. That
 	// leaves the whole rest of the grid to be taken up by the first item.
 	display: grid;
-	grid-template-rows: 1fr;
+	// spacing elements is easier wit grid-gap that with margins or flexbox
+	// with grid we still cant style the gaps induvidually so adjust the row size
+	grid-template-rows: 1fr min-content 6rem 1fr;
+	grid-template-columns: max-content; // this is to stop the content taking the whole width
+	grid-row-gap: 1.5rem;
+	justify-content: center; // center the whole grid in it's container
 
 	&__logo {
 		height: 3rem;
+		justify-self: center;
+	}
+
+	&__btn {
+		align-self: start;
+		justify-self: start;
 	}
 
 	&__seenon-text {
