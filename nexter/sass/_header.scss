@@ -1,82 +1,83 @@
 .header {
-  background-color: $color-grey-dark-1;
-  grid-column: full-start / col-end 6;
-  // best way of creating an overlay for an image, going from one color to the
-  // same color
-  background-image: linear-gradient(
-      rgba($color-secondary, 0.93),
-      rgba($color-secondary, 0.93)
-    ),
-    url("../img/hero.jpeg");
-  background-position: center;
-  padding: 8rem;
-  padding-top: 4rem;
+	background-color: $color-grey-dark-1;
+	grid-column: full-start / col-end 6;
+	// best way of creating an overlay for an image, going from one color to the
+	// same color
+	background-image: linear-gradient(rgba($color-secondary, 0.93), rgba($color-secondary, 0.93)),
+		url("../img/hero.jpeg");
+	background-position: center;
+	padding: 8rem;
+	padding-top: 4rem;
 
-  // When you only set up your grid to have just one row at 1fr,
-  // that will be the only explicit row you'll have, css grid
-  // then places the rest of the items in additional implicit
-  // rows that only take up as much space as needed for the
-  // content inside. So if you look at it sort of backwards; you
-  // have 6 items total, the last 5 items take up only as much
-  // space as they need for their individual contents. That
-  // leaves the whole rest of the grid to be taken up by the first item.
-  display: grid;
-  // spacing elements is easier with grid-gap than with margins or flexbox
-  // with grid we still cant style the gaps induvidually so adjust the row size
-  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
-  grid-template-columns: minmax(
-    min-content,
-    max-content
-  ); // this is to stop the content taking the whole width
-  grid-row-gap: 1.5rem;
-  justify-content: center; // center the whole grid in it's container
+	// When you only set up your grid to have just one row at 1fr,
+	// that will be the only explicit row you'll have, css grid
+	// then places the rest of the items in additional implicit
+	// rows that only take up as much space as needed for the
+	// content inside. So if you look at it sort of backwards; you
+	// have 6 items total, the last 5 items take up only as much
+	// space as they need for their individual contents. That
+	// leaves the whole rest of the grid to be taken up by the first item.
+	display: grid;
+	// spacing elements is easier with grid-gap than with margins or flexbox
+	// with grid we still cant style the gaps induvidually so adjust the row size
+	grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+	grid-template-columns: minmax(
+		min-content,
+		max-content
+	); // this is to stop the content taking the whole width
+	grid-row-gap: 1.5rem;
+	justify-content: center; // center the whole grid in it's container
 
-  // make the header and the realtors full width
-  @media only screen and (max-width: $bp-medium) {
-    grid-column: 1 / -1;
-  }
+	// make the header and the realtors full width
+	@media only screen and (max-width: $bp-medium) {
+		grid-column: 1 / -1;
+	}
 
-  &__logo {
-    height: 3rem;
-    justify-self: center;
-  }
+	@media only screen and (max-width: $bp-small) {
+		padding: 5rem;
+	}
 
-  &__btn {
-    align-self: start;
-    justify-self: start;
-  }
+	&__logo {
+		height: 3rem;
+		justify-self: center;
+	}
 
-  &__seenon-text {
-    // text and pseudo elements are also seen as grid items
-    display: grid;
-    // with the columns, by default css will layout the content in rows
-    grid-template-columns: 1fr max-content 1fr;
-    grid-column-gap: 1.5rem;
-    align-items: center;
+	&__btn {
+		align-self: start;
+		justify-self: start;
+	}
 
-    font-size: 1.6rem;
-    color: $color-grey-light-2;
+	&__seenon-text {
+		// text and pseudo elements are also seen as grid items
+		display: grid;
+		// with the columns, by default css will layout the content in rows
+		grid-template-columns: 1fr max-content 1fr;
+		grid-column-gap: 1.5rem;
+		align-items: center;
 
-    &::before,
-    &::after {
-      content: "";
-      height: 1px;
-      display: block;
-      background-color: currentColor; // currentColor saves you from writing out more
-    }
-  }
+		font-size: 1.6rem;
+		color: $color-grey-light-2;
 
-  &__seenon-logos {
-    // using grid here because it's saves you from messaing with margins
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 3rem;
-    justify-items: center;
-    align-items: center;
-    img {
-      max-height: 2.5rem;
-      max-width: 100%;
-      filter: brightness(70%);
-    }
-  }
+		&::before,
+		&::after {
+			content: "";
+			height: 1px;
+			display: block;
+			background-color: currentColor; // currentColor saves you from writing out more
+		}
+	}
+
+	&__seenon-logos {
+		// using grid here because it's saves you from messaing with margins
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 3rem;
+		justify-items: center;
+		align-items: center;
+		img {
+			max-height: 2.5rem;
+			max-width: 100%;
+			filter: brightness(70%);
+		}
+	}
 }
