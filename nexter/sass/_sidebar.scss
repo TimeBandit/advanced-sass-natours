@@ -27,16 +27,16 @@
 		background-color: #fff;
 		height: 2px;
 		width: 4.5rem;
-		content: ""; // this makes is visible
+		content: ""; /*! this makes is visible */
 		display: block;
 	}
 
-	// move up
+	/*! move up */
 	&::before {
 		transform: translateY(-1.5rem);
 	}
 
-	// move down
+	/*! move down */
 	&::after {
 		transform: translateY(1.3rem);
 	}
@@ -45,12 +45,12 @@
 		margin-top: 0;
 		margin-right: 3rem;
 
-		// move up
+		/*! move up */
 		&::before {
 			transform: translateY(-1.2rem);
 		}
 
-		// move down
+		/*! move down */
 		&::after {
 			transform: translateY(1rem);
 		}

@@ -6,8 +6,8 @@
 	min-height: 50rem;
 	color: var(--color-grey-dark-2);
 
-	// with a desktop first statergy media queries are of
-	// type 'max-width'
+	/*! with a desktop first statergy media queries are of */
+	/*! type 'max-width' */
 	@media only screen and (max-width: $bp-largest) {
 		margin: 0;
 		max-width: 100%;
@@ -49,7 +49,7 @@
 
 .hotel-view {
 	background-color: #fff;
-	// height: 80rem;
+	/*! height: 80rem; */
 	flex: 1;
 }
 

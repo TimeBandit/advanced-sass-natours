@@ -7,9 +7,9 @@
 .nav {
 	list-style: none;
 	display: grid;
-	// auto-fit - place as many columns as will fit in one row
-	// could use flexbox here but gid gives you spacing between the
-	// columns, with flex box you would margin-right all except the last
+	/*! auto-fit - place as many columns as will fit in one row */
+	/*! could use flexbox here but gid gives you spacing between the */
+	/*! columns, with flex box you would margin-right all except the last */
 	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 	grid-gap: 2rem;
 	align-items: center;

@@ -2,7 +2,7 @@
 	&__pictures {
 		background-color: $color-primary;
 		grid-column: full-start / col-end 4;
-		// track to add a shade over the top of an image
+		/*! track to add a shade over the top of an image */
 		background-image: linear-gradient(rgba($color-primary, 0.5), rgba($color-primary, 0.5)),
 			url(../img/back.jpg);
 		background-size: cover;
@@ -10,8 +10,8 @@
 		display: grid;
 		grid-template-rows: repeat(6, 1fr);
 		grid-template-columns: repeat(6, 1fr);
-		align-items: center; // aligns the image centrally because the image
-		// keeps it's aspect ratio;
+		align-items: center; /*! aligns the image centrally because the image */
+		/*! keeps it's aspect ratio; */
 
 		@media only screen and (max-width: $bp-medium) {
 			grid-column: 1 / -1;
@@ -20,7 +20,7 @@
 	}
 
 	&__img--1 {
-		// specify a width in % for images so they stay flexible
+		/*! specify a width in % for images so they stay flexible */
 		width: 100%;
 		grid-row: 2 / 6;
 		grid-column: 2 / 6;
@@ -34,8 +34,8 @@
 		}
 	}
 	&__img--2 {
-		width: 115%; // pushes it over the edge of the grid
-		z-index: 20; // brings the edge of the image up
+		width: 115%; /*! pushes it over the edge of the grid */
+		z-index: 20; /*! brings the edge of the image up */
 		grid-row: 4 / 6;
 		grid-column: 4 / 7;
 		box-shadow: 0 2rem 5rem rgba(#000, 0.2);
@@ -52,8 +52,8 @@
 
 		padding: 6rem 8vw;
 
-		// can do the same thing with either grid or
-		// flex, but since it's 1D, flex-box makes more sense.
+		/*! can do the same thing with either grid or */
+		/*! flex, but since it's 1D, flex-box makes more sense. */
 
 		/* grid */
 		display: grid;
