@@ -1,7 +1,7 @@
 .section-about {
 	background-color: $color-grey-dark-light-1;
 	padding: 25rem 0;
-	// move up the entire section to place under the green slant
+	/*! move up the entire section to place under the green slant */
 	margin-top: -20vh;
 
 	@include respond(tab-port) {
@@ -17,11 +17,11 @@
 		),
 		url(../img/nat-4.jpg);
 	background-size: cover;
-	// move the section up
+	/*! move the section up */
 	margin-top: -10rem;
-	// an alternative to clip path in crating
+	/*! an alternative to clip path in crating */
 	transform: skewY(-7deg);
-	// the direct child selector
+	/*! the direct child selector */
 	& > * {
 		transform: skewY(7deg);
 	}
@@ -60,9 +60,9 @@
 }
 
 .book {
-	// a different way of achieving a clipped section using gradient rather that
-	// skew or with clip-path
-	// 'transparent' is also a valid css color
+	/*! a different way of achieving a clipped section using gradient rather that */
+	/*! skew or with clip-path */
+	/*! 'transparent' is also a valid css color */
 	background-image: linear-gradient(
 			105deg,
 			rgba($color-white, 0.9) 0%,
@@ -75,7 +75,7 @@
 	border-radius: 3px;
 	overflow: hidden;
 	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-	// height: 50rem;
+	/*! height: 50rem; */
 
 	@include respond(tab-land) {
 		background-image: linear-gradient(

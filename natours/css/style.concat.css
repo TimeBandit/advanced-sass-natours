@@ -1165,7 +1165,8 @@ body {
 
 .row {
   max-width: 114rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  /*! appends a pseudo element after the element */ }
   @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem;
@@ -1365,6 +1366,7 @@ body {
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
+  /*! move up the entire section to place under the green slant */
   margin-top: -20vh; }
   @media only screen and (max-width: 56.25em) {
     .section-about {
@@ -1374,8 +1376,11 @@ body {
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
+  /*! move the section up */
   margin-top: -10rem;
-  transform: skewY(-7deg); }
+  /*! an alternative to clip path in crating */
+  transform: skewY(-7deg);
+  /*! the direct child selector */ }
   .section-features > * {
     transform: skewY(7deg); }
   @media only screen and (max-width: 56.25em) {
@@ -1405,12 +1410,16 @@ body {
       padding: 10rem 0; } }
 
 .book {
+  /*! a different way of achieving a clipped section using gradient rather that */
+  /*! skew or with clip-path */
+  /*! 'transparent' is also a valid css color */
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  /*! height: 50rem; */ }
   @media only screen and (max-width: 75em) {
     .book {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);

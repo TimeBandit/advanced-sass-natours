@@ -1,5 +1,5 @@
 @mixin clearfix {
-	// appends a pseudo element after the element
+	/*! appends a pseudo element after the element */
 	&::after {
 		content: "";
 		display: table;
