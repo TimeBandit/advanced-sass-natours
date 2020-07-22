@@ -5,51 +5,51 @@
 *,
 *::before,
 *::after {
-	margin: 0px;
-	padding: 0px;
-	/* 👇 by default it's not inherited so this forces it */
-	box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+  /* 👇 by default it's not inherited so this forces it */
+  box-sizing: inherit;
 }
 
 /* convert all measurements to rem */
 html {
-	/* 👇 use cannot change the font size via zoom in the browser */
-	/* font-size: 10px; */
-	/* a percentage of the root font-size */
-	// defines what 1rem is
-	font-size: 62.5%; // root font size 1rem=10px 10px/16px = 62.5%
+  /* 👇 use cannot change the font size via zoom in the browser */
+  /* font-size: 10px; */
+  /* a percentage of the root font-size */
+  // defines what 1rem is
+  font-size: 62.5%; // root font size 1rem=10px 10px/16px = 62.5%
 
-	// place the larger ones before larger ones when using max-width in your breakpoints
-	// with mobile first start with the smalles ones
-	@include respond(tab-land) {
-		// width < 1200?
-		font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
-	}
+  // place the larger ones before smaller ones when using max-width in your breakpoints
+  // with mobile first start with the smalles ones
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
 
-	@include respond(tab-port) {
-		// width < 900?
-		font-size: 50%; // 1rem = 8px, 8/16 = 50%
-	}
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
 
-	// @include respond(phone) {
-	// 	font-size: 30%; // not needed, comes from next media query
-	// }
+  // @include respond(phone) {
+  // 	font-size: 30%; // not needed, comes from next media query
+  // }
 
-	@include respond(big-desktop) {
-		font-size: 75%; // 1rem  = 12, 12/16
-	}
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem  = 12, 12/16
+  }
 }
 
 /* project wide font settings */
 body {
-	box-sizing: border-box;
-	padding: 3rem;
-	@include respond(tab-port) {
-		padding: 0; // 1rem = 8px, 8/16 = 50%
-	}
+  box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-port) {
+    padding: 0; // 1rem = 8px, 8/16 = 50%
+  }
 }
 
 ::selection {
-	background-color: $color-primary;
-	color: $color-white;
+  background-color: $color-primary;
+  color: $color-white;
 }

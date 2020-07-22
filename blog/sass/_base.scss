@@ -1,0 +1,62 @@
+// COLOR VARIABLES
+$color-primary-1: #f9d0be;
+$color-primary-2: #f2d6de;
+
+$color-secondary-1: #d298d7;
+$color-secondary-2: #e5acbd;
+$color-secondary-3: #f4e225;
+$color-secondary-4: #c8b80a;
+$color-secondary-5: #b54412;
+
+$color-shape-1: #faf3a4;
+$color-shape-2: #f2e2f4;
+
+$color-text-1: #1a1a1a;
+$color-text-2: #333333;
+$color-text-3: #e6e6e6;
+
+// FONT VARIABLES
+$font-primary: "Zilla Slab", serif;
+$font-display: "Poppins", sans-serif;
+
+// RESPONSIVE BREAKPOINTS - keep them rounded to the nearest 100px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+	@media only screen and (max-width: $bp-largest) {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-family: $font-primary;
+	color: $color-text-1;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+.container {
+	display: grid;
+	grid-template-rows: 80vh repeat(3, min-content);
+	grid-template-columns:
+		[leftbar-start] 1fr [leftbar-end center-start]
+		minmax(25rem, 80rem) [center-end rightbar-start] 1fr [rightbar-end];
+}
+
+.center {
+	position: relative;
+}

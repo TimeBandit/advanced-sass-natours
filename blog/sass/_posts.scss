@@ -1,0 +1,41 @@
+.posts {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-row-gap: 0.8rem;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 1.2rem;
+		right: 1.2rem;
+		width: 12.8rem;
+		height: 12.8rem;
+		background-image: url("../img/triangle.svg");
+		animation: spin 13s linear infinite;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transform-origin: center center;
+	}
+
+	.post {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.8rem;
+
+		&__title {
+			text-decoration: solid underline $color-secondary-3 2px;
+		}
+
+		&__date {
+			font-style: italic;
+			color: $color-secondary-1;
+		}
+	}
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}

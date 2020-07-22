@@ -1,0 +1,23 @@
+.btn {
+	border-style: none;
+	padding: 0.8rem 1.2rem;
+	transition: all 0.2s;
+	cursor: pointer;
+	background-color: white;
+
+	&__action {
+		font-size: 2rem;
+		color: $color-secondary-4;
+		border-radius: 3px;
+	}
+
+	span {
+		transition: all 0.2s;
+	}
+	&__action:hover {
+		span {
+			margin-left: 8px;
+			color: $color-secondary-5;
+		}
+	}
+}
